@@ -1,0 +1,1 @@
+import"./CgGKHRA6.js";import{t as i,a as m,f as p}from"./nloyr2BX.js";import{s as a}from"./CKtqVHy3.js";import{p as s}from"./BqwXmF_n.js";var f=p('<img src="/black-logo-main.webp" alt="BCS Berkshire"/>');function g(e,o){let r=s(o,"size",3,50);var t=f();i(()=>{a(t,"width",r()),a(t,"height",r())}),m(e,t)}export{g as B};
