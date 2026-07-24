@@ -5,10 +5,12 @@
 	 * once supplied. Concept: a node branching into two paths, in the
 	 * branch's green + gold, standing in for both "branch" and network.
 	 */
-	let { size = 40 }: { size?: number } = $props();
+	let { size = 50 }: { size?: number } = $props();
 </script>
-
-<svg
+<img width={size}
+	height={size}
+	src="/black-logo-main.webp" alt="BCS Berkshire" />
+<!--<svg
 	width={size}
 	height={size}
 	viewBox="0 0 40 40"
@@ -34,4 +36,4 @@
 	/>
 	<circle cx="29.5" cy="9" r="3.5" fill="var(--color-green-700)" />
 	<circle cx="29.5" cy="31" r="3.5" fill="var(--color-gold-600)" />
-</svg>
+</svg> --> 

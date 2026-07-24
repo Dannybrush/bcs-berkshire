@@ -17,7 +17,7 @@
 <section class="hero">
 	<div class="container hero-grid">
 		<div class="hero-copy">
-			<p class="eyebrow"><BranchMark size={20} /> {site.parentOrg}</p>
+			<p class="eyebrow"><BranchMark size={60} /> {site.parentOrg}</p>
 			<h1>Berkshire's community of IT professionals, 2,500 strong.</h1>
 			<p class="lede">
 				We're the local branch of BCS, run entirely by volunteers — bringing talks, networking,

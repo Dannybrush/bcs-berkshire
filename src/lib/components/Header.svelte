@@ -23,7 +23,7 @@
 <header class="site-header">
 	<div class="container bar">
 		<a href="/" class="brand" onclick={closeAll}>
-			<BranchMark size={38} />
+			<BranchMark size={100} />
 			<span class="brand-text">
 				<strong>BCS Berkshire</strong>
 				<span class="brand-sub">{site.parentOrg}</span>
@@ -137,7 +137,7 @@
 		border-radius: var(--radius-sm);
 	}
 
-	.primary-nav ul {
+	.primary-nav > ul {
 		list-style: none;
 		display: flex;
 		align-items: center;
@@ -234,7 +234,7 @@
 		.primary-nav.open {
 			transform: translateX(0);
 		}
-		.primary-nav ul {
+		.primary-nav > ul {
 			flex-direction: column;
 			align-items: stretch;
 			gap: var(--space-1);
