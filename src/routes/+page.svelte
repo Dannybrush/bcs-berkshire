@@ -106,7 +106,11 @@
 	<div class="grid-3">
 		{#each featuredOfficers as member (member.name)}
 			<article class="card officer-preview">
-				<div class="avatar" aria-hidden="true">{member.initials}</div>
+				{#if member.photo}
+					<img class="avatar" src={member.photo} alt="" width="64" height="64" />
+				{:else}
+					<div class="avatar" aria-hidden="true">{member.initials}</div>
+				{/if}
 				<h3>{member.name}</h3>
 				<p class="role">{member.role}</p>
 			</article>
@@ -257,6 +261,7 @@
 		width: 64px;
 		height: 64px;
 		border-radius: 50%;
+		object-fit: cover;
 		background: var(--color-green-700);
 		color: #fff;
 		display: flex;

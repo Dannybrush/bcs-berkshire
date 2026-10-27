@@ -4,7 +4,11 @@
 </script>
 
 <article class="card member-card">
-	<div class="avatar" aria-hidden="true">{member.initials}</div>
+	{#if member.photo}
+		<img class="avatar" src={member.photo} alt="" width="56" height="56" />
+	{:else}
+		<div class="avatar" aria-hidden="true">{member.initials}</div>
+	{/if}
 	<div>
 		<h3>{member.name}</h3>
 		<p class="role">{member.role}</p>
@@ -12,6 +16,9 @@
 		{#if member.linkedin}
 			<a class="linkedin" href={member.linkedin} target="_blank" rel="noreferrer">LinkedIn profile</a>
 		{/if}
+		{#each member.links ?? [] as link (link.url)}
+			<a class="linkedin" href={link.url} target="_blank" rel="noreferrer">{link.label}</a>
+		{/each}
 	</div>
 </article>
 
@@ -26,6 +33,7 @@
 		width: 56px;
 		height: 56px;
 		border-radius: 50%;
+		object-fit: cover;
 		background: var(--color-green-700);
 		color: #fff;
 		display: flex;
@@ -50,6 +58,7 @@
 		margin: 0 0 var(--space-2);
 	}
 	.linkedin {
+		display: block;
 		font-size: 0.85rem;
 		font-weight: 600;
 	}
