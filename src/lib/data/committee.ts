@@ -24,6 +24,7 @@ export const officers: CommitteeMember[] = [
 		role: 'Treasurer & Early Careers Advocate',
 		initials: 'DB',
 		photo: '/committee/daniel-broomhead.jpg',
+		linkedin: 'https://www.linkedin.com/in/daniel-broomhead/',
 		bio: 'A jack-of-all-trades in computer science with a passion for cyber security and networking, whose day job centres on data and solution architecture. He is the Artificial Intelligence Lead for his company’s UK division and Lead Developer in its Emerging Technologies team, always eager to join new projects and develop his skills in any aspect of IT. Joined BCS at university, quickly becoming President of the University of Reading Computer Science Society and its BCS Student Chapter, and has also served on other committees, including the Open Source Specialist Group (OSSG). Now Treasurer of the Berkshire Branch.',
 	},
 	{
