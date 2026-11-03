@@ -19,46 +19,52 @@
 	lede="The Berkshire branch is run by a committee elected at the branch AGM each September. Committee members with specialist skills are also co-opted from time to time."
 />
 
-<section class="section container">
+<section class="section section--tight container">
 	<h2>Officers</h2>
-	<div class="grid-2">
-		{#each officers as member (member.name)}
+	<div class="card-grid">
+		{#each officers as member (member.slug)}
 			<CommitteeCard {member} />
 		{/each}
 	</div>
 </section>
 
-<section class="section container">
+<section class="section section--tight container">
 	<h2>General committee members</h2>
-	<div class="grid-2">
-		{#each generalMembers as member (member.name)}
+	<div class="card-grid">
+		{#each generalMembers as member (member.slug)}
 			<CommitteeCard {member} />
 		{/each}
 	</div>
 </section>
 
-<section class="section container-narrow card join-card">
-	<h2>Join the committee</h2>
-	<p>
-		Meetings run from 7 to 9pm on the first Tuesday of every month, online or in person when we
-		can. They're open to all members — come along to learn more about what we do, with no
-		obligation to join. Ask our secretary for joining instructions.
-	</p>
-	<a class="btn btn-primary" href={`mailto:${site.contact.secretary}`}>Email the secretary</a>
+<section class="section section--tight container">
+	<div class="card join-card">
+		<h2>Join the committee</h2>
+		<p>
+			Meetings run from 7 to 9pm on the first Tuesday of every month, online or in person when we
+			can. They're open to all members — come along to learn more about what we do, with no
+			obligation to join. Ask our secretary for joining instructions.
+		</p>
+		<a class="btn btn-primary" href={`mailto:${site.contact.secretary}`}>Email the secretary</a>
+	</div>
 </section>
 
 <style>
-	.grid-2 {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--space-5);
+	h2 {
+		font-size: var(--fs-h4);
+		margin-bottom: var(--space-5);
 	}
-	@media (max-width: 800px) {
-		.grid-2 {
-			grid-template-columns: 1fr;
-		}
+	.card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+		gap: var(--space-5);
 	}
 	.join-card {
 		text-align: center;
+		background: var(--color-green-50);
+	}
+	.join-card p {
+		max-width: 62ch;
+		margin-inline: auto;
 	}
 </style>
