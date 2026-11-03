@@ -1,13 +1,18 @@
 import type { RequestHandler } from './$types';
 import { footerNav } from '$lib/data/navigation';
+import { allMembers } from '$lib/data/committee';
 import { site } from '$lib/config/site';
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
-	const urls = footerNav
+	const paths = [
+		...footerNav.map((item) => item.href),
+		...allMembers.map((member) => `/meet-the-committee/${member.slug}`)
+	];
+	const urls = paths
 		.map(
-			(item) => `\t<url>\n\t\t<loc>${site.url}${item.href}</loc>\n\t</url>`
+			(path) => `\t<url>\n\t\t<loc>${site.url}${path}</loc>\n\t</url>`
 		)
 		.join('\n');
 
